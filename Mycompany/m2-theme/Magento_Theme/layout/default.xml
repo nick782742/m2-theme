@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">header links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="customer_service">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">customer_service</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="about-shopbazar">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">about-shopbazar</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="legal-links">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">legal-links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <move element="header.panel" destination="header-wrapper" after="top.search"/>
+        <move element="navigation.sections" destination="header-wrapper" after="logo" />
+    </body>
+</page>

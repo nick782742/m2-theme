@@ -1,0 +1,28 @@
+
+<script>
+    // <![CDATA[
+    require([
+        'jquery',
+        'sticky',
+        'mage/ie-class-fixer',
+        'domReady!'
+    ], function($, sticky) {
+        'use strict';
+        
+        // product information section
+        $('.product-info-main').sticky({
+            container: '.product-detail',
+        });
+        
+        // product detail information tabs
+        $('.product.info.detailed').sticky({
+            container: '.product-detail',
+        });
+
+        //whishlist icon
+        $('.action.towishlist').sticky({
+            container: '.product.media',
+        });
+    });
+    // ]]>
+</script>
